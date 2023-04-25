@@ -6,8 +6,29 @@ windows without a titlebar and only the close default button.
 Frameless windows are often used as a launcher window, i.e. as Xcode does.
 
 ## Usage
+<details>
+<summary>List of scenes</summary>
 
-Nothing added yet.
+- [FramelessWindow Scene](#framelesswindow-scene)
+
+</details>
+
+### FramelessWindow Scene
+Creates a window without the title bar and only the close default button.
+
+```swift
+import SwiftUI
+import FramelessWindow
+
+@main
+struct YourApp: App {
+    var body: some Scene {
+        FramelessWindow("Window Title", id: "window-id") {
+            ContentView()
+        }
+    }
+}
+```
 
 ## Adding `FramelessWindow` as a Dependency
 
