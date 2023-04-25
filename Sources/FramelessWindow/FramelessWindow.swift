@@ -20,11 +20,13 @@ public struct FramelessWindow<Content: View>: Scene {
 
 struct WindowButtonsModifier<Content: View>: View {
     @Environment(\.scenePhase) private var scenePhase
+    @State private var window: NSWindow?
     let windowId: String
     let content: () -> Content
 
     var body: some View {
         self.content()
+            .framelessWindow(self.$window)
             .onChange(of: self.scenePhase) { phase in
                 guard phase != .background else { return }
                 for window in NSApplication.shared.windows {
@@ -33,8 +35,9 @@ struct WindowButtonsModifier<Content: View>: View {
                     }
                     window.standardWindowButton(.miniaturizeButton)?.isHidden = true
                     window.standardWindowButton(.zoomButton)?.isHidden = true
+                    self.window = window
                 }
-        }
+            }
     }
 
     init(for windowId: String, with content: @escaping () -> Content) {
