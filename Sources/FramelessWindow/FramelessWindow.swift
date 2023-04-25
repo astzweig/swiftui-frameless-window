@@ -26,6 +26,7 @@ struct WindowButtonsModifier<Content: View>: View {
 
     var body: some View {
         self.content()
+            .ignoresSafeArea()
             .framelessWindow(self.$window)
             .onChange(of: self.scenePhase) { phase in
                 guard phase != .background else { return }
