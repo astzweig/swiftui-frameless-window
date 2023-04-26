@@ -22,6 +22,11 @@ struct YourApp: App {
 }
 ```
 
+## Documentation
+The library has enriched symbol documentation for [DocC].
+
+[DocC]: https://www.swift.org/documentation/docc/documenting-a-swift-framework-or-package
+
 ## Adding `FramelessWindow` as a Dependency
 
 To use the `FramelessWindow` library in a SwiftUI project, 
@@ -32,7 +37,7 @@ let package = Package(
     // name, platforms, products, etc.
     dependencies: [
         // other dependencies
-        .package(url: "https://github.com/astzweig/swiftui-frameless-window", from: "0.0.1"),
+        .package(url: "https://github.com/astzweig/swiftui-frameless-window", from: "1.0.0"),
     ],
     targets: [
         .executableTarget(name: "<command-line-tool>", dependencies: [
