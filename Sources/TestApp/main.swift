@@ -3,7 +3,7 @@ import FramelessWindow
 
 struct TestApp: App {
 	var body: some Scene {
-		FramelessWindow(withId: "single-window", andTitle: "Single Window") {
+		FramelessWindow("Single Window", id: "single-window") {
 			VStack {
 				Image(systemName: "globe").font(.title).foregroundStyle(.blue)
 				Text("Hello, world!")

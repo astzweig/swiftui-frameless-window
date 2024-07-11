@@ -15,7 +15,7 @@ import FramelessWindow
 @main
 struct YourApp: App {
     var body: some Scene {
-        FramelessWindow(withId: "window-id") {
+        FramelessWindow("Window Title", id: "window-id") {
             ContentView()
         }
     }
@@ -66,3 +66,4 @@ The minimum Swift version supported by swiftui-frameless-window releases are det
 swiftui-frameless-window   | Minimum Swift Version
 ---------------------------|----------------------
 `0.0.1 ...`                | 5.7
+`2.0.0 ...`                | 5.10

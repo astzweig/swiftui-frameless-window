@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.10
 import PackageDescription
 
 let package = Package(
@@ -9,8 +9,16 @@ let package = Package(
             name: "FramelessWindow",
             targets: ["FramelessWindow"])
     ],
+	dependencies: [
+		.package(url: "https://github.com/astzweig/swiftui-window-reference", from: "1.0.0")
+	],
     targets: [
-        .target(name: "FramelessWindow"),
+        .target(
+			name: "FramelessWindow",
+			dependencies: [
+				.product(name: "WindowReference", package: "swiftui-window-reference")
+			]
+		),
 		.executableTarget(
 			name: "TestApp",
 			dependencies: ["FramelessWindow"]
