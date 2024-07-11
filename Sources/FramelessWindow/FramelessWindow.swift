@@ -8,7 +8,7 @@ import SwiftUI
  */
 public struct FramelessWindow<Content: View>: Scene {
     /// Store the window in local state to share within the environment.
-    @State private  var window: NSWindow?
+    @State private var window: NSWindow?
     @Environment(\.scenePhase) private var scenePhase
 
     let titleKey: LocalizedStringKey
