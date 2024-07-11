@@ -10,8 +10,10 @@ let package = Package(
             targets: ["FramelessWindow"])
     ],
     targets: [
-        .target(
-            name: "FramelessWindow",
-            dependencies: [])
+        .target(name: "FramelessWindow"),
+		.executableTarget(
+			name: "TestApp",
+			dependencies: ["FramelessWindow"]
+		)
     ]
 )

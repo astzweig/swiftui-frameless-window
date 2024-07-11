@@ -27,6 +27,16 @@ The library has enriched symbol documentation for [DocC].
 
 [DocC]: https://www.swift.org/documentation/docc/documenting-a-swift-framework-or-package
 
+## Testing `FramelessWindow`
+FramelessWindow includes an executable target that launches a SwiftUI app to
+test `FramelessWindow`. Either execute it with
+
+```sh
+$ swift run
+```
+
+or select the `TestApp` under `Product > Scheme` in Xcode.
+
 ## Adding `FramelessWindow` as a Dependency
 
 To use the `FramelessWindow` library in a SwiftUI project, 
